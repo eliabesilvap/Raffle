@@ -1,18 +1,23 @@
+import { useState } from 'react';
 import { Link } from 'react-scroll';
-
+import {FaTimes} from 'react-icons/fa';
+import { CiMenuFries } from 'react-icons/ci';
 
 const Nav = () => {
+    const [click, setClick] = useState(false);
+    const handleClick = () => setClick(!click);
+
     const content =<>
-        <div className= "">
-            <ul>
-                <Link to="Home">
-                    <li>Home</li>
+        <div className= "lg:hidden block absolute top-16 w-full left-0 right-0 bg-slate-900 transition">
+            <ul className='text-center text-x1 p-20'>
+                <Link spy={true} smooth={true} to="Home">
+                    <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 houver:rounded">Home</li>
                 </Link>
-                <Link to="About">
-                    <li>Contato</li>
+                <Link spy={true} smooth={true} to="About">
+                    <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 houver:rounded">Contato</li>
                 </Link>
-                <Link to="About">
-                    <li>About</li>
+                <Link spy={true} smooth={true} to="About">
+                    <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 houver:rounded">About</li>
                 </Link>
             </ul>
         </div>
@@ -26,18 +31,26 @@ const Nav = () => {
                 <div className='lg:flex md:flex lg: flex-1 itens center justify-end font-normal hidden'>
                     <div className='flex-10'>
                      <ul className='flex gap-8 rm-16 text-[19px]'>
-                <Link to="Home">
-                <li>Home</li>
+                <Link spy={true} smooth={true} to="Home">
+                <li className='hover:text-fuchsia-600 transition border-b-2 border-slate-900 hover:border-fuchsia-600 cursor-pointer'>Home</li>
                 </Link>
-                <Link to="About">
-                <li>Contato</li>
+                <Link spy={true} smooth={true} to="About">
+                <li className='hover:text-fuchsia-600 transition border-b-2 border-slate-900 hover:border-fuchsia-600 cursor-pointer'>Contato</li>
                 </Link>
-                <Link to="About">
-                <li>About</li>
+                <Link spy={true} smooth={true} to="About">
+                <li className='hover:text-fuchsia-600 transition border-b-2 border-slate-900 hover:border-fuchsia-600 cursor-pointer'>About</li>
                 </Link>        
             </ul>   
                     </div>
                 </div>
+                <div>
+                    {click && content}
+                </div>
+
+                <button className='block sm:hidden transtion' onClick={handleClick}>
+                    {click ? <FaTimes /> : <CiMenuFries/>}
+                </button>
+
             </div>
       </nav>
     );
