@@ -1,9 +1,15 @@
+import Nav from "./Nav"
+import Footer from "./Footer"
 
 const Contact = () => {
-    return(
-        <nav>
+  return (
+    <div>
+      <Nav/>
+    <main className="flex-grow">
+    <div className="h-[500px]"></div> {/* Espaço vazio temporário */}
+    </main>
 
-        </nav>
+   </div>
     );
 };
 
