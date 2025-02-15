@@ -22,10 +22,10 @@ raffle/
 │── public/           
 │── src/              
 │   │── assets/       
-│   │── Components/   # Pasta para componentes reutilizáveis
-│   │   ├── Nav.jsx         # Barra de navegação
-│   │   ├── NameDraw.jsx       # Sorteio de nomes
-│   │   ├── NumberDraw.jsx     # Sorteio de números
+│   │── Components/
+│   │   ├── Nav.jsx
+│   │   ├── NameDraw.jsx
+│   │   ├── NumberDraw.jsx
 │   │   ├── Footer.jsx
 │   │── Pages/
 │   │   ├── Home.jsx   
@@ -43,23 +43,31 @@ raffle/
 │── vite.config.js     
 
 Como Rodar o Projeto
+
 -----------------------------------------------------------------------------------------------------------------------
+
 1. Clone o Repositório
 
 git clone https://github.com/eliabesilvap/raffle.git
 cd raffle
+
 -----------------------------------------------------------------------------------------------------------------------
+
 2. Instale as Dependências
 
 npm install
+
 -----------------------------------------------------------------------------------------------------------------------
+
 3. Rode o Projeto
 
 npm run dev
 
 Acesse o projeto no navegador: http://localhost:5173
 
+
 -----------------------------------------------------------------------------------------------------------------------
+
 Melhorias Futuras
 
 Implementação de um Back-end para armazenamento de sorteios
@@ -71,6 +79,7 @@ Melhorias na interface com animações e feedbacks visuais
 Contribuição
 
 Se quiser contribuir, fique à vontade para abrir uma issue ou um pull request!
+
 -----------------------------------------------------------------------------------------------------------------------
 
 Autor
