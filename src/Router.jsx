@@ -13,6 +13,7 @@ const Router = () => {
       <Route path="/sorteio-de-nomes" element={<NameDrawPage />} />
       <Route path="/sorteio-de-numeros" element={<NumberDrawPages/>} />
       <Route path="/login" element={<LoginPages/>} />
+      <Route path="/raffle" element={<Home/>} />
     </Routes>
   );
 };
