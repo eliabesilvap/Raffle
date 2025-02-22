@@ -49,13 +49,13 @@ const Nav = () => {
                             Sortear<FaChevronDown className='text-lg' />
                         </button>
                         {dropdownOpen && (
-                            <ul className='absolute left-0 mt-2 bg-slate-800 text-white shadow-lg rounded-md overflow-hidden min-w-max'>
+                            <ul className='absolute right-0 mt-2 bg-slate-800 text-white shadow-lg rounded-md overflow-hidden min-w-max'>
                                 <li className='px-4 py-2 hover:text-fuchsia-600'><Link to="/sorteio-de-nomes">Sorteio de nomes</Link></li>
                                 <li className="px-4 py-2 hover:text-fuchsia-600"><Link to="/sorteio-de-numeros">Sorteio de números</Link></li>
                             </ul>
                         )}
                     </li>
-                    <li><Link to="/" className='hover:text-fuchsia-600 transition text-lg'>Entrar</Link></li> 
+                    {/*incluir novo item do menu*/}
                 </ul>
 
                 {/* Botão do menu mobile */}
@@ -80,11 +80,10 @@ const Nav = () => {
                                 <ul className="bg-slate-800 text-white shadow-lg rounded-md overflow-hidden mt-2">
                                    <li className="px-4 py-2 hover:text-fuchsia-600"><Link to="/sorteio-de-nomes" onClick={toggleMenu}>Sorteio de nomes</Link></li>
                                    <li className="px-4 py-2 hover:text-fuchsia-600"><Link to="/sorteio-de-numeros" onClick={toggleMenu}>Sorteio de números</Link></li>
-                                   <li className="px-4 py-2 hover:text-fuchsia-600"><Link to="/name-draw/option3" onClick={toggleMenu}>Sorteio no Instagram</Link></li>
                             </ul>
                             )}
                         </li>
-                        <li className="hover:text-fuchsia-600 transition px-4 py-2"><Link to="/" onClick={toggleMenu}>Entrar</Link></li>
+                    {/*incluir novo item do menu*/}
                     </ul>
                 </div>
             )}
